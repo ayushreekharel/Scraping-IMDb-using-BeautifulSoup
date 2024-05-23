@@ -63,21 +63,14 @@ def get_movie_data(url, headers):
 
 url = "https://www.imdb.com/search/title/?groups=top_1000&count=100&sort=user_rating,desc"
 headers = {
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-    "Accept-Encoding": "gzip, deflate, br, zstd",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Cache-Control": "max-age=0",
-    "Cookie": "session-id=138-0701897-3551105; session-id-time=2082787201l; ubid-main=134-9621333-6174418; ad-oo=0; ci=e30; session-token=dmm4f2V9rJdJ2mWfrboVnsrQCCfixIIQWsY9nsXy9VcRlPx5kDkYKXPF09syU11pjZ2CMbjWB7BMs3bYHUSfx+sDDzI8zI4TMRuGbxQikwvJKHdi5VlEgsbNhInHu2BoQBBOcwf2qNaCmR6wLDyLwmJE7FaUgu9CsgFZdlYGxKi3NcbxDgQqguBB3epbMawS1Se34brYlz5MzVnVTnBnsQBlgz57ZT0QdRJkYw2AKZ+gMjRddPRQ4homTe2bvxCm7Ljmf0ukizTi7yery3CfSfl185XOU6vYrI/ts+7RvlW5W3S0b/S5Aa9/CcZ7PviSZyV3nOKNrRz/t5zHTIfnxr6tTVZ6d9eB; csm-hit=tb:84B9PJ7YPJ1JAVN8HKFC+s-84B9PJ7YPJ1JAVN8HKFC|1716433590622&t:1716433590622&adb:adblk_no",
-    "Referer": "https://www.google.com/",
-    "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
-    "Sec-Ch-Ua-Mobile": "?0",
-    "Sec-Ch-Ua-Platform": '"Windows"',
-    "Sec-Fetch-Dest": "document",
-    "Sec-Fetch-Mode": "navigate",
-    "Sec-Fetch-Site": "same-origin",
-    "Sec-Fetch-User": "?1",
-    "Upgrade-Insecure-Requests": "1",
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    ''' 1.Open Google Chrome.
+        2.Go to the IMDb website (https://www.imdb.com/).
+        3.Right-click anywhere on the page and select "Inspect" from the context menu.
+        4.In the developer tools, go to the "Network" tab.
+        5.Refresh the page (press F5).
+        6.It will show the list and you shoul click on the first one. You will see response header, request header. You need request header.
+
+  '''  
 }
 
 movie_titles, years, movie_times, categories, descriptions, metascores, ratings = get_movie_data(url, headers)
